@@ -1,0 +1,24 @@
+@use './abstract/root';
+
+
+@use './components/body';
+
+@use './abstract/font';
+
+@use './abstract/mixin';
+
+@use './abstract/variables';
+
+@use './components/header';
+
+@use './components/navbarIcon';
+
+@use './components/banner';
+
+@use './components/perfil';
+
+@use './components/aboutme';
+
+@use './components/contact';
+
+@use './abstract/responsive';

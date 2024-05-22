@@ -1,0 +1,36 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+.contact-box {
+    margin: 2em 0 1em 0;
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .contact-title {
+        @include mixin.fontMontserrat(1.5rem, variables.$cor-primaria);
+        letter-spacing: 0.2em;
+    }
+
+    .email-btn {
+        margin-top: 1em;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: none;
+        padding: 0.5em;
+        background-color: variables.$cor-primaria;
+        border-radius: 8px;
+
+        .email-icon {
+            font-size: 1.2rem;
+        }
+
+        span {
+            @include mixin.fontMontserrat(1rem, variables.$preto);
+            font-weight: 700;
+        }
+    }
+}

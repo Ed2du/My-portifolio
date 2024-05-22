@@ -1,0 +1,29 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+header {
+    position: relative;
+    padding: 0.3em 1em;
+
+    .navbar {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+            .logoImg {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+            }
+
+            .navbar-topics {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    }
+
+
+}
+

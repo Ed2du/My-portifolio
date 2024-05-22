@@ -1,0 +1,97 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+.PerfilContent {
+    margin-top: 6.5em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .imgperfil {
+        width: 70%;
+        border-radius: 50%;
+        transform: translateY(-3rem);
+        border: 20px solid variables.$cor-terciaria;
+        -webkit-box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+        -moz-box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+        box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+        animation: scaleY 5s ease infinite;
+
+        @keyframes scaleY {
+            0% {
+                transform: translateY(0);
+            }
+
+            25% {
+                transform: translateY(-1.5%);
+            }
+
+            50% {
+                transform: translateY(-2%);
+            }
+
+            100% {
+                transform: translateY(0%);
+            }
+        }
+    }
+
+    .text-perfil {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        .profile-box {
+            .profile {
+                @include mixin.fontLato(1.3rem, rgb(238, 238, 238));
+                padding: 1em;
+                margin-top: 1em;
+                text-align: center;
+                line-height: 140%;
+            }
+        }
+
+        .midia-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 2rem;
+
+            .icon-box {
+                padding: 0.4em;
+                border-radius: 50%;
+                color: variables.$cor-primaria;
+                background-color: #252525;
+                -webkit-box-shadow: -1px 3px 17px 1px rgba(0,0,0,0.78);
+                -moz-box-shadow: -1px 3px 17px 1px rgba(0,0,0,0.78);
+                box-shadow: -1px 3px 17px 1px rgba(0,0,0,0.78);
+                transition: background-color 0.3s ease;
+
+                a {
+                    text-decoration: none;
+                    color: variables.$cor-primaria;
+                }
+
+                a:hover {
+                    color: white;
+                }
+
+                &:nth-child(1):hover, :nth-child(1):focus {
+                    background-color: #0a66c2;
+                    color: white;
+                    box-shadow: none;
+                }
+
+                &:nth-child(2):hover, :nth-child(1):focus {
+                    background-color: #010409;
+                    color: #e6edf3;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

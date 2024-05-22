@@ -1,0 +1,54 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+.Banner {
+    margin-top: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .letter-group {
+        display: flex;
+        gap: 6px;
+
+        .letter {
+            font-family: "Lato", sans-serif;
+            font-size: 2rem;
+            color: #fffb00;
+        }
+    }
+}
+
+.Banner .letter-group {
+    animation: lighting 1.5s ease infinite;
+}
+
+@keyframes lighting 
+{
+	0% {
+        color: #cac71d;
+		text-shadow: 0 0 6px #d8d518, 0 0 50px #ff6c00
+	}
+
+    25% {
+		color: #cecb23;
+		text-shadow: 0 0 8px #ebe70c, 0 0 70px #ff6c00;
+	}
+
+	50% {
+		color: #ebe70c;
+		text-shadow: 0 0 8px #ebe70c, 0 0 70px #ff6c00;
+	}
+
+
+    75% {
+        color: #f0ec09;
+		text-shadow: 0 0 8px #ebe70c, 0 0 70px #ff6c00;
+    }
+
+	100% {
+		color: #fff900;
+		text-shadow: 0 0 9px #fff900, 0 0 90px #ff6c00;
+	}
+}

@@ -1,0 +1,415 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 15vh 0 0 0;
+    background: variables.$gradient-background-card;
+    padding: 1em;
+    border-radius: 15px;
+    gap: 20px;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+    -moz-box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+    box-shadow: 0px 0px 26px 0px rgba(238,238,238,0.84);
+
+    .about-title {
+        @include mixin.fontMontserrat(2rem, variables.$cor-primaria);
+        padding: 0.7em 0;
+    }
+
+    .about-p {
+        @include mixin.fontMontserrat(1.2rem, variables.$branco);
+        text-align: start;
+        line-height: 115%;
+    }
+
+    .about-skills {
+        @include mixin.fontMontserrat(1.4rem, variables.$cor-primaria);
+        text-align: left;
+    }
+
+    .tech-skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .tech-list {
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            text-align: left;
+            width: 100vw;
+            gap: 10px;
+
+            #html {
+                color: #E34F26;
+                transition: background-color 1s linear;
+            }
+            #html:hover {
+                background-color: #E34F26;
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+
+            #css {
+                color: #1572B6;
+                transition: background-color 1s linear;
+            }
+            #css:hover {
+                background-color: #1572B6;
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+
+            #js {
+                color: #F7DF1E;
+                transition: background-color 1s linear;
+            }
+            #js:hover {
+                background-color: #F7DF1E;
+                .tech-name {
+                    color: black;
+                }
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+
+            #react {
+                color: #61DAFB;
+                transition: background-color 1s linear;
+            }
+            #react:hover {
+                background-color: #61DAFB;
+                .tech-name {
+                    color: black;
+                }
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+
+            #node {
+                color: #339933;
+                transition: background-color 1s linear;
+            }
+            #node:hover {
+                background-color: #339933;
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+
+            #sass {
+                color: #CC6699;
+                transition: background-color 1s linear;
+            }
+            #sass:hover {
+                background-color: #CC6699;
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+            
+            #bootstrap {
+                color: #7952B3;
+                transition: background-color 1s linear;
+            }
+            
+            #bootstrap:hover {
+                background-color: #7952B3;
+                svg {
+                    transform: translateX(72vw);
+                    background-color: white;
+                }
+            }
+            @media screen and (min-width: 767px) {
+                #bootstrap:hover {
+                    background-color: #7952B3;
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+
+                #sass:hover {
+                    background-color: #CC6699;
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+
+                #node:hover {
+                    background-color: #339933;
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+
+                #react:hover {
+                    background-color: #61DAFB;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+
+                #js:hover {
+                    background-color: #F7DF1E;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+                
+                #css:hover {
+                    background-color: #1572B6;
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+
+                #html:hover {
+                    background-color: #E34F26;
+                    svg {
+                        transform: translateX(70vw);
+                        background-color: white;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1023px) {
+                #bootstrap:hover {
+                    background-color: #7952B3;
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+
+                #sass:hover {
+                    background-color: #CC6699;
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+
+                #node:hover {
+                    background-color: #339933;
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+
+                #react:hover {
+                    background-color: #61DAFB;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+
+                #js:hover {
+                    background-color: #F7DF1E;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+                
+                #css:hover {
+                    background-color: #1572B6;
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+
+                #html:hover {
+                    background-color: #E34F26;
+                    svg {
+                        transform: translateX(31.2vw);
+                        background-color: white;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1439px) {
+                #bootstrap:hover {
+                    background-color: #7952B3;
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+
+                #sass:hover {
+                    background-color: #CC6699;
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+
+                #node:hover {
+                    background-color: #339933;
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+
+                #react:hover {
+                    background-color: #61DAFB;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+
+                #js:hover {
+                    background-color: #F7DF1E;
+                    .tech-name {
+                        color: black;
+                    }
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+                
+                #css:hover {
+                    background-color: #1572B6;
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+
+                #html:hover {
+                    background-color: #E34F26;
+                    svg {
+                        transform: translateX(34.78vw);
+                        background-color: white;
+                    }
+                }
+            }
+
+            
+            .tech-card {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 4.5em;
+                height: 100%;
+                border-radius: 8px;
+                
+                svg {
+                    text-align: left;
+                    z-index: 1;
+                    font-size: 5.5rem;
+                    transition: transform 1s ease;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+                
+                .tech-name {
+                    text-align: center;
+                    @include mixin.fontMontserrat(1.2rem, variables.$branco);
+                } 
+            }
+        }
+    }
+    
+    .Projects-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        gap: 15px;
+
+        .project {
+            padding: 1em 0.1em;
+            background: variables.$gradient-project;
+            border-radius: 8px;
+            gap: 10px;
+            
+
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            border: 8px;
+
+            .img-content {
+                width: 100%;
+                height: 100%;
+
+                .img-project {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+            }
+
+            .project-content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 70%;
+                gap: 10px;
+
+                .project-title {
+                    @include mixin.fontMontserrat(1.5rem, variables.$cor-primaria);
+                }
+
+                .project-p {
+                    @include mixin.fontMontserrat(1.1rem, variables.$branco);
+                    text-align: left;
+                    text-indent: 10px;
+                    padding: 0.5em 0;
+                }
+
+                .btn-link {
+                    text-decoration: none;
+                    @include mixin.fontMontserrat(1rem, variables.$preto);
+                    padding: 1em;
+                    font-weight: 600;
+                    background-color: variables.$cor-primaria;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}

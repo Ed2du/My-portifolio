@@ -1,0 +1,71 @@
+@use '../abstract/mixin';
+@use '../abstract/variables';
+
+.headerIcon {
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+
+    .line-1 {
+        width: 100%;
+        height: 4px;
+        background-color: variables.$cor-primaria;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .line-2 {
+        width: 100%;
+        height: 4px;
+        background-color: variables.$cor-primaria;
+        border-radius: 4px;
+    }
+
+    .line-3 {
+        width: 100%;
+        height: 4px;
+        background-color: variables.$cor-primaria;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.Header-topics {
+    margin-top: 0.5em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    top: 7vh;
+    right: 5vw;
+    text-align: right;
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+
+    .header-item {
+        padding: 0.5em;
+
+        .header-link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            @include mixin.fontMontserrat(1.5rem, #EEEEEE);
+        }
+    }
+}
+
+#inputcheck-header {
+    display: none;
+}
+
+#inputcheck-header:checked ~ .Header-topics {
+    opacity: 1; /* Quando o input está checado, a opacidade é 1 */
+    visibility: visible; /* Torna o elemento visível */
+    transition: opacity 0.3s ease, visibility 0s linear; /* Adiciona uma transição suave */
+}
